@@ -16,7 +16,7 @@ public class Main {
      */
 
     public static void main(String[] args) throws IOException {
-        String fileName = "/Users/oliviachisman/dev/depaul/csc_421/convex-hull/TestFiles-Graham/case1.txt"
+        String fileName = "/Users/oliviachisman/dev/depaul/csc_421/convex-hull/TestFiles-Graham/case1.txt";
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
 
         List<Point> points = new ArrayList<>();
