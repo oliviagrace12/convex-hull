@@ -8,13 +8,7 @@ import static com.company.Util.isLeftTurn;
 /**
  * Created by oliviachisman on 10/1/18
  */
-public class MergeSortAlgorithm {
-
-    private final Point anchor;
-
-    public MergeSortAlgorithm(Point anchor) {
-        this.anchor = anchor;
-    }
+public abstract class MergeSort {
 
     public List<Point> sort(List<Point> points) {
         if (points.size() > 1) {
@@ -39,7 +33,7 @@ public class MergeSortAlgorithm {
             } else {
                 Point pL = leftList.get(leftIndex);
                 Point pR = rightList.get(rightIndex);
-                if (isLeftTurn(anchor, pL, pR)) {
+                if (compare(pL, pR)) {
                     sorted.add(pL);
                     leftIndex++;
                 } else {
@@ -50,5 +44,7 @@ public class MergeSortAlgorithm {
         }
         return sorted;
     }
+
+    protected abstract boolean compare(Point p1, Point p2);
 
 }
