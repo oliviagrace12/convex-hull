@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import static com.company.Util.isLeftTurn;
+
 /**
  * Created by oliviachisman on 9/29/18
  */
@@ -41,21 +43,12 @@ public class GrahamsAlgorithm {
         return true;
     }
 
-    private boolean isLeftTurn(Point po, Point pi, Point pj) {
-        return crossProduct(po, pi, pj) > 0;
-    }
-
-    private int crossProduct(Point po, Point pi, Point pj) {
-        return (pi.getX() - po.getX()) * (pj.getY() - po.getY()) - (pj.getX() - po.getX()) * (pj.getY() - po.getY());
-    }
-
     private List<Point> orderByPolarAngle(Point start, List<Point> points) {
-        // todo
-        return null;
+        return new MergeSortAlgorithm(start).sort(points);
     }
 
     private Point findStartPoint(List<Point> points) {
-
+        // todo
         return null;
     }
 }
