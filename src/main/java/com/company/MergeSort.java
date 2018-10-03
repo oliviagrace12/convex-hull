@@ -3,8 +3,6 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.company.Util.isLeftTurn;
-
 /**
  * Created by oliviachisman on 10/1/18
  */
