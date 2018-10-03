@@ -9,25 +9,25 @@ import java.util.List;
 public abstract class MergeSort {
 
     public List<Point> sort(List<Point> points) {
-        if (points.size() > 1) {
+        if (points.size() == 1) {
             return points;
         }
         int midpoint = points.size()/2;
         List<Point> leftList = sort(points.subList(0, midpoint));
         List<Point> rightList = sort(points.subList(midpoint, points.size()));
 
-        return mergeLists(leftList, rightList);
+        return merge(leftList, rightList);
     }
 
-    private List<Point> mergeLists(List<Point> leftList, List<Point> rightList) {
+    public List<Point> merge(List<Point> leftList, List<Point> rightList) {
         List<Point> sorted = new ArrayList<>();
         int leftIndex = 0;
         int rightIndex = 0;
-        while (!leftList.isEmpty() || !rightList.isEmpty()) {
-            if (leftList.isEmpty()) {
-                sorted.addAll(rightList);
-            } else if (rightList.isEmpty()) {
-                sorted.addAll(leftList);
+        while (rightIndex < rightList.size() || leftIndex < leftList.size()) {
+            if (leftIndex == leftList.size()) {
+                sorted.add(rightList.get(rightIndex++));
+            } else if (rightIndex == rightList.size()) {
+                sorted.add(leftList.get(leftIndex++));
             } else {
                 Point pL = leftList.get(leftIndex);
                 Point pR = rightList.get(rightIndex);

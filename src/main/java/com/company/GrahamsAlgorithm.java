@@ -33,7 +33,7 @@ public class GrahamsAlgorithm {
         return new ArrayList<>(convexHull);
     }
 
-    private boolean isConvexHull(Stack<Point> convexHull) {
+    public boolean isConvexHull(Stack<Point> convexHull) {
         List<Point> tmpHull = new ArrayList<>(convexHull);
         for (int i = 0; i < tmpHull.size() - 2; i++) {
             if (!isLeftTurn(tmpHull.get(i), tmpHull.get(i+1), tmpHull.get(i+2))) {
@@ -47,7 +47,7 @@ public class GrahamsAlgorithm {
         return new PolarAngleSort(start).sort(points);
     }
 
-    private Point findStartPoint(List<Point> points) {
+    public Point findStartPoint(List<Point> points) {
         List<Point> pointsOrderedByYValue = new VerticalSort().sort(points);
         if (points.get(0).getY() < points.get(1).getY()) {
             return points.get(0);

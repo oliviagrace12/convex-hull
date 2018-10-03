@@ -10,6 +10,6 @@ public class Util {
     }
 
     private static int crossProduct(Point po, Point pi, Point pj) {
-        return (pi.getX() - po.getX()) * (pj.getY() - po.getY()) - (pj.getX() - po.getX()) * (pj.getY() - po.getY());
+        return (pi.getX() - po.getX()) * (pj.getY() - po.getY()) - (pj.getX() - po.getX()) * (pi.getY() - po.getY());
     }
 }

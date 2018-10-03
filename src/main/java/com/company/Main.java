@@ -13,10 +13,12 @@ public class Main {
      *
      * You can assume that the points in S are distinct.
      * For sorting the points, you need to code an O(n lg n)-time sorting algorithm.
+     *
+     * Only one not passing is case 5.
      */
 
     public static void main(String[] args) throws IOException {
-        String fileName = "/Users/oliviachisman/dev/depaul/csc_421/convex-hull/src/main/resources/TestFiles-Graham/case1.txt";
+        String fileName = "/Users/oliviachisman/dev/depaul/csc_421/convex-hull/src/main/resources/TestFiles-Graham/case6.txt";
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
 
         List<Point> points = new ArrayList<>();
