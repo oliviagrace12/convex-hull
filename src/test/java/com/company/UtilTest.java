@@ -15,4 +15,13 @@ public class UtilTest {
 
         assert Util.isLeftTurn(p1,p3,p2);
     }
+
+    @Test
+    public void testIsLeftTurn2() {
+        Point p1 = new Point(3, 1);
+        Point p2 = new Point(4, 1);
+        Point p3 = new Point(12, 1);
+
+        assert !Util.isLeftTurn(p1,p3,p2);
+    }
 }

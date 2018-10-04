@@ -18,7 +18,8 @@ public class Main {
      */
 
     public static void main(String[] args) throws IOException {
-        String fileName = "/Users/oliviachisman/dev/depaul/csc_421/convex-hull/src/main/resources/TestFiles-Graham/case6.txt";
+        String fileName = "/Users/oliviachisman/dev/depaul/csc_421/convex-hull/src/main/resources/TestFiles-Graham/" +
+                "case6.txt";
         BufferedReader reader = new BufferedReader(new FileReader(new File(fileName)));
 
         List<Point> points = new ArrayList<>();
@@ -33,5 +34,7 @@ public class Main {
         List<Point> convexHull = grahamsAlgorithm.findConvexHull(points);
 
         convexHull.forEach(System.out::println);
+
+
     }
 }

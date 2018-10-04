@@ -9,7 +9,7 @@ public class Util {
         return crossProduct(po, pi, pj) > 0;
     }
 
-    private static int crossProduct(Point po, Point pi, Point pj) {
+    public static int crossProduct(Point po, Point pi, Point pj) {
         return (pi.getX() - po.getX()) * (pj.getY() - po.getY()) - (pj.getX() - po.getX()) * (pi.getY() - po.getY());
     }
 }
