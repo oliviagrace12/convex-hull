@@ -1,8 +1,9 @@
 package com.company;
 
+import com.company.sort.MergeSort;
+import com.company.sort.VerticalSort;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

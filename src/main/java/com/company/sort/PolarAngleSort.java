@@ -1,4 +1,7 @@
-package com.company;
+package com.company.sort;
+
+import com.company.Point;
+import com.company.sort.MergeSort;
 
 import static com.company.Util.crossProduct;
 

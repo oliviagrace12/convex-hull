@@ -1,4 +1,7 @@
-package com.company;
+package com.company.sort;
+
+import com.company.Point;
+import com.company.sort.MergeSort;
 
 /**
  * Created by oliviachisman on 10/1/18

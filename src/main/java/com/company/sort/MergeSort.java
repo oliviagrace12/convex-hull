@@ -1,4 +1,6 @@
-package com.company;
+package com.company.sort;
+
+import com.company.Point;
 
 import java.util.ArrayList;
 import java.util.List;

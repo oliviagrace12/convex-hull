@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.sort.MergeSort;
+import com.company.sort.PolarAngleSort;
 import org.junit.Test;
 
 import java.util.ArrayList;

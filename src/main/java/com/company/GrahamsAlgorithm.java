@@ -1,10 +1,14 @@
 package com.company;
 
+import com.company.sort.HorizontalSort;
+import com.company.sort.PolarAngleSort;
+import com.company.sort.VerticalSort;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import static com.company.Util.isLeftTurn;
+import static com.company.Util.crossProduct;
 
 /**
  * Created by oliviachisman on 9/29/18
@@ -41,6 +45,10 @@ public class GrahamsAlgorithm {
             }
         }
         return true;
+    }
+
+    private boolean isLeftTurn(Point po, Point pi, Point pj) {
+        return crossProduct(po, pi, pj) > 0;
     }
 
     private List<Point> orderByPolarAngle(Point start, List<Point> points) {
